@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../common/common_functions.dart';
 import '../style/text_style.dart';
-import '../widget/portfolio_card.dart';
+import '../common/portfolio_list.dart';
+import '../widget/portfolio_card_list.dart';
 
 class MyFlutterProjects extends StatelessWidget {
   final GlobalKey scrollKey;
@@ -15,11 +15,11 @@ class MyFlutterProjects extends StatelessWidget {
       child: SizedBox(
           key: scrollKey,
           width: MediaQuery.of(context).size.width * 0.8,
-          child: const Column(
+          child: Column(
             children: [
-              Text("Flutter Projects", style: sectionTitleTextStyle),
-              Padding(padding: EdgeInsets.symmetric(vertical: 24)),
-              PortfolioCard("assets/images/myworldcup.png", "내가 만든 월드컵", "https://github.com/valborgs/my-worldcup-local"),
+              const Text("Flutter Projects", style: sectionTitleTextStyle),
+              const Padding(padding: EdgeInsets.symmetric(vertical: 24)),
+              PortfolioCardList(flutterList),
             ],
           )
       ),

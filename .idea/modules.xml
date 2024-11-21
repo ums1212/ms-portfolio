@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ms_portfolio.iml" filepath="$PROJECT_DIR$/ms_portfolio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/ms_portfolio_android.iml" filepath="$PROJECT_DIR$/android/ms_portfolio_android.iml" />
     </modules>
   </component>
 </project>

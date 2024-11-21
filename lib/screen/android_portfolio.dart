@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../common/portfolio_list.dart';
 import '../style/text_style.dart';
-import '../widget/mobile_android_portfolio_widget.dart';
-import '../widget/pc_android_portfolio_widget.dart';
+import '../widget/portfolio_card_list.dart';
 
 class MyAndroidProjects extends StatelessWidget {
   final GlobalKey scrollKey;
@@ -19,9 +19,7 @@ class MyAndroidProjects extends StatelessWidget {
             children: [
               const Text("Android Projects", style: sectionTitleTextStyle),
               const Padding(padding: EdgeInsets.symmetric(vertical: 24)),
-              (MediaQuery.of(context).size.width > 1250)
-                  ? const PcAndroidPortfolioWidget()
-                  : const MobileAndroidPortfolioWidget(),
+              PortfolioCardList(androidList),
             ],
           )
       ),

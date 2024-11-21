@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ms_portfolio/widget/mobile_profile_widget.dart';
-import 'package:ms_portfolio/widget/pc_profile_widget.dart';
+import 'package:ms_portfolio/widget/profile_widget.dart';
 
 import '../style/text_style.dart';
 import '../widget/stack_icon.dart';

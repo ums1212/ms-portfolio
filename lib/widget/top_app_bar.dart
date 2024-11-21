@@ -11,53 +11,35 @@ class TopAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: const Text("MS Eom Portfolio"),
+      title: const Text("MS Eom"),
       actions: [
         IconButton(
-            onPressed: (){
-              Scrollable.ensureVisible(
-                  profileKey.currentContext!,
-                  duration: const Duration(milliseconds: 300),
-                  curve: Curves.easeInOut,
-                  alignment: 0
-              );
-            },
+            onPressed: () => scrollToPortfolio(profileKey),
             icon: const Icon(Icons.person)
         ),
         IconButton(
-            onPressed: (){
-              Scrollable.ensureVisible(
-                  androidKey.currentContext!,
-                  duration: const Duration(milliseconds: 300),
-                  curve: Curves.easeInOut,
-                  alignment: 0
-              );
-            },
+            onPressed: () => scrollToPortfolio(androidKey),
             icon: const Icon(Icons.android),
         ),
         IconButton(
-          onPressed: (){
-            Scrollable.ensureVisible(
-                flutterKey.currentContext!,
-                duration: const Duration(milliseconds: 300),
-                curve: Curves.easeInOut,
-                alignment: 0
-            );
-          },
+          onPressed: () => scrollToPortfolio(flutterKey),
           icon: const Icon(Icons.flutter_dash),
         ),
         IconButton(
-          onPressed: (){
-            Scrollable.ensureVisible(
-                webKey.currentContext!,
-                duration: const Duration(milliseconds: 300),
-                curve: Curves.easeInOut,
-                alignment: 0
-            );
-          },
+          onPressed: () => scrollToPortfolio(webKey),
           icon: const Icon(Icons.web),
         )
       ],
     );
   }
+}
+
+
+void scrollToPortfolio(GlobalKey key){
+  Scrollable.ensureVisible(
+      key.currentContext!,
+      duration: const Duration(milliseconds: 300),
+      curve: Curves.easeInOut,
+      alignment: 0
+  );
 }
