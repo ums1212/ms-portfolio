@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:ms_portfolio/screen/home_screen.dart';
 import 'package:ms_portfolio/widget/top_app_bar.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await dotenv.load(fileName: ".env");
-
+void main() {
   runApp(MyApp());
 }
 
