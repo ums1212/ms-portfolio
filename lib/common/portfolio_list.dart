@@ -8,7 +8,7 @@ List<Portfolio> androidList = [
       "https://github.com/APP-Android2/FinalProject-ShoppingMallService-team6",
       "대학 졸업 작품 매입 판매 및 전시 쇼핑몰 앱\n\n마이페이지, 회원정보 수정, 작가 정보, 전시실 신청 기능 담당",
       ["Firebase", "Firestore", "Glide", "LiveData", "DataBinding", "SNS Login", "MVVM"],
-      "./assets/assets/pdf/unipiece.pdf"
+      "./assets/pdf/unipiece.pdf"
   ),
   Portfolio(
       "assets/images/modigm.png",

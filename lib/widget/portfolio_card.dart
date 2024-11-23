@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ms_portfolio/model/portfolio.dart';
+import 'package:ms_portfolio/screen/pdf_screen.dart';
 import 'package:ms_portfolio/style/text_style.dart';
 import 'package:ms_portfolio/widget/tech_stack_chip.dart';
 import 'package:url_launcher/url_launcher_string.dart';
@@ -35,7 +36,16 @@ class PortfolioCard extends StatelessWidget {
                 const Padding(padding: EdgeInsetsDirectional.only(bottom: 16)),
                 if(portfolio.pdfLink!=null)
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      if(portfolio.pdfLink!=null){
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => PdfScreen(portfolio.pdfLink!),
+                            fullscreenDialog: true,
+                          ),
+                        );
+                      }
+                    },
                     child: Image(image: Image.asset("assets/images/pdf_icon.png").image),
                   ),
               ],
