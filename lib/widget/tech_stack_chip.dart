@@ -20,6 +20,5 @@ class TechStackChip extends StatelessWidget {
       shadowColor: Colors.grey[60],
       padding: const EdgeInsets.all(8.0),
     );
-    ;
   }
 }
