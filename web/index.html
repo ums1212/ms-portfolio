@@ -31,8 +31,39 @@
 
   <title>ms_portfolio</title>
   <link rel="manifest" href="manifest.json">
+
+  <!-- loading lottie style -->
+  <style>
+    .container {
+      width: 100vw;
+      height: 100vh;
+      display: flex; /* Default Axis is X*/
+      justify-content: center; /* Main Axis */
+      align-items: center; /* Cross Axis */
+    }
+    .indicator{
+      width: 200px;
+    }
+  </style>
+  <script type="application/javascript" src="/assets/packages/flutter_inappwebview_web/assets/web/web_support.js" defer></script>
 </head>
-<body>
+<body style="overflow: hidden">
+<div id="loading_indicator" class="container">
+  <h2>포트폴리오 준비중...</h2>
+  <br>
+  <img class="indicator" src="./assets/images/loading_lottie.gif" />
+</div>
+
   <script src="flutter_bootstrap.js" async></script>
+<script>
+  window.onload = function () {
+    setTimeout(function () {
+      var loadingIndicator = document.getElementById("loading_indicator");
+      if (loadingIndicator) {
+        loadingIndicator.remove();
+      }
+    }, 3000);
+  };
+</script>
 </body>
 </html>

@@ -45,7 +45,8 @@ class MyProfile extends StatelessWidget {
                     StackIcon(imageAsset: "assets/images/flutter_icon.png"),
                     StackIcon(imageAsset: "assets/images/dart_icon.png"),
                   ],
-                )
+                ),
+                const Padding(padding: EdgeInsets.only(bottom: 24)),
               ],
             ),
           )

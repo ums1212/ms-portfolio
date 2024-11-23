@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
 import '../style/text_style.dart';
 import '../common/portfolio_list.dart';
@@ -20,6 +21,22 @@ class MyWebPortfolios extends StatelessWidget {
                 const Text("Git Repository / Blog", style: sectionTitleTextStyle),
                 const Padding(padding: EdgeInsets.symmetric(vertical: 24)),
                 PortfolioCardList(webList),
+                const Padding(padding: EdgeInsets.symmetric(vertical: 24)),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      width: 700,
+                      height: 100,
+                      alignment: Alignment.center,
+                      child: InAppWebView(
+                          initialUrlRequest: URLRequest(
+                              url: WebUri("https://ghchart.rshah.org/219138/ums1212")
+                          )
+                      ),
+                    )
+                  ],
+                ),
               ]
           )
       ),

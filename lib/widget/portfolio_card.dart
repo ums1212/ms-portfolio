@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ms_portfolio/model/portfolio.dart';
 import 'package:ms_portfolio/style/text_style.dart';
@@ -25,13 +24,20 @@ class PortfolioCard extends StatelessWidget {
               children: [
                 Image.asset(portfolio.imagePath, width: 300),
                 Text(portfolio.title, style: cardTitleTextStyle),
+                const Padding(padding: EdgeInsetsDirectional.only(bottom: 16)),
                 Text(portfolio.describe, style: cardDescribeTextStyle),
                 const Padding(padding: EdgeInsetsDirectional.only(bottom: 16)),
                 Wrap(
                   spacing: 6.0,
                   runSpacing: 4.0,
                   children: [for(var tech in portfolio.techStack) TechStackChip(tech)],
-                )
+                ),
+                const Padding(padding: EdgeInsetsDirectional.only(bottom: 16)),
+                if(portfolio.pdfLink!=null)
+                  InkWell(
+                    onTap: () {},
+                    child: Image(image: Image.asset("assets/images/pdf_icon.png").image),
+                  ),
               ],
             ),
           ),
