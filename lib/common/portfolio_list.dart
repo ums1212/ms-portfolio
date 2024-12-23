@@ -16,7 +16,7 @@ List<Portfolio> androidList = [
       "https://github.com/APP-Android2/FinalProject-modigm",
       "2024-05 ~ 2024-11\n\n개발자 스터디 모집 앱\n\n회원가입 기능 담당",
       ["Firebase", "Firestore", "FirebaseAuthentication", "Glide", "ViewBinding", "DataBinding", "StateFlow", "SNS Login", "MVVM"],
-    null
+      "./assets/pdf/modigm.pdf"
   ),
   Portfolio(
       "assets/images/moviefriends.png",
@@ -44,7 +44,7 @@ List<Portfolio> webList = [
       "assets/images/github_icon.png",
       "깃허브 1",
       "https://github.com/ums1212",
-      "",
+      "앱 개발",
       [],
     null
   ),
@@ -52,7 +52,7 @@ List<Portfolio> webList = [
       "assets/images/github_icon.png",
       "깃허브 2",
       "https://github.com/valborgs",
-      "",
+      "그 외",
       [],
     null
   ),
