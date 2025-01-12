@@ -5,6 +5,7 @@ class Portfolio {
   final String describe;
   final List<String> techStack;
   final String? pdfLink;
+  final String? webLink;
 
   Portfolio(
       this.imagePath,
@@ -12,5 +13,6 @@ class Portfolio {
       this.link,
       this.describe,
       this.techStack,
-      this.pdfLink);
+      this.pdfLink,
+      this.webLink);
 }

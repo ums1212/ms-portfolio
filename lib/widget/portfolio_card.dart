@@ -34,7 +34,7 @@ class PortfolioCard extends StatelessWidget {
                   children: [for(var tech in portfolio.techStack) TechStackChip(tech)],
                 ),
                 const Padding(padding: EdgeInsetsDirectional.only(bottom: 16)),
-                if(portfolio.pdfLink!=null)
+                if(portfolio.pdfLink!=null || portfolio.webLink!=null)
                   InkWell(
                     onTap: () {
                       if(portfolio.pdfLink!=null){
@@ -44,6 +44,8 @@ class PortfolioCard extends StatelessWidget {
                             fullscreenDialog: true,
                           ),
                         );
+                      }else if(portfolio.webLink!=null){
+                        launchUrlString(portfolio.webLink!);
                       }
                     },
                     child: Image(image: Image.asset("assets/images/pdf_icon.png").image),
